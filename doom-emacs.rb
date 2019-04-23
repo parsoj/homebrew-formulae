@@ -8,10 +8,20 @@ class DoomEmacs < Formula
 
   depends_on "d12frosted/emacs-plus/emacs-plus" => ["with-no-titlebar", "without-spacemacs-icon", "with-no-frame-refocus", "with-modern-icon"]
 
+  def print_sys(cmd)
+    require "open3"
+    Open3.popen3(cmd) do |stdin, stdout, stderr, wait_thr|
+      while line = stdout.gets
+        puts line
+      end
+  end
+	
+  end
+
   def install
-    system "git clone -b develop https://github.com/hlissner/doom-emacs.git ~/.emacs.d"
-    system "~/.emacs.d/bin/doom install -y"
-    system "~/.emacs.d/bin/doom compile -y"
+    print_sys("git clone -b develop https://github.com/hlissner/doom-emacs.git ~/.emacs.d")
+    print_sys("~/.emacs.d/bin/doom install -y")
+    print_sys("~/.emacs.d/bin/doom compile -y")
   end
 
 end
