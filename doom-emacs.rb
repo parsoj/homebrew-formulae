@@ -14,6 +14,7 @@ class DoomEmacs < Formula
       while line = stdout.gets
         puts line
       end
+    end
   end
 	
   end
