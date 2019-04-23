@@ -19,8 +19,8 @@ class DoomEmacs < Formula
 
   def install
     print_sys("git clone -b develop https://github.com/hlissner/doom-emacs.git ~/.emacs.d")
-    print_sys("~/.emacs.d/bin/doom install -y")
-    print_sys("~/.emacs.d/bin/doom compile -y")
+    print_sys("~/.emacs.d/bin/doom -y install")
+    print_sys("~/.emacs.d/bin/doom -y compile")
   end
 
 end
