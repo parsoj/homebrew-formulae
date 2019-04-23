@@ -16,8 +16,6 @@ class DoomEmacs < Formula
       end
     end
   end
-	
-  end
 
   def install
     print_sys("git clone -b develop https://github.com/hlissner/doom-emacs.git ~/.emacs.d")
