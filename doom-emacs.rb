@@ -9,9 +9,9 @@ class DoomEmacs < Formula
   depends_on "d12frosted/emacs-plus/emacs-plus" => ["with-no-titlebar", "without-spacemacs-icon", "with-no-frame-refocus", "with-modern-icon"]
 
   def install
-    puts system "git clone -b develop https://github.com/hlissner/doom-emacs.git ~/.emacs.d"
-    puts system "~/.emacs.d/bin/doom install -y"
-    puts system "~/.emacs.d/bin/doom compile -y"
+    system "git clone -b develop https://github.com/hlissner/doom-emacs.git ~/.emacs.d"
+    system "~/.emacs.d/bin/doom install -y"
+    system "~/.emacs.d/bin/doom compile -y"
   end
 
 end
