@@ -1,4 +1,4 @@
-class Foo < Formula
+class DoomEmacs < Formula
   desc "Installer for Doom Emacs"
   homepage "https://github.com/hlissner/doom-emacs"
 
